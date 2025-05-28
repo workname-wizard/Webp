@@ -1,0 +1,188 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth@0,75..100;1,75..100&family=Oswald:wght@200..700&family=Sedgwick+Ave&display=swap');
+:root{
+  --yellow:rgba(255, 252, 93, 1);
+  --pink:rgba(255, 0, 250, 1);
+  --background-black:rgba(40, 40, 40, 1);
+
+  font-family:'Oswald', sans-serif;
+  font-size:10px;
+}
+*{margin:0;}
+
+h1{
+  font-size:5.6rem;
+  font-weight:700;
+  font-family: 'Sedgwick Ave', Arial;
+}
+/*Navigationsleiste*/
+
+#navbar {
+  display:flex;
+  align-items: center;       
+  justify-content: space-between;
+  padding: 0.5rem 1rem;      
+  background-color: var(--yellow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height:50px;
+  font-size: 2.4rem;
+}
+
+a:hover{
+  color:var(--pink)
+}
+ul {
+  display:flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin: 0 3rem 0 0;
+  padding: 0;
+  list-style: none;
+  object-position:right;
+}
+  
+  ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    color:black;
+  }
+
+  .logo{
+    object-fit: contain;
+    object-position: left;
+    height:45px;
+    width:auto;
+    display:block;
+  }
+  /*willkommensbereich*/
+
+#welcome-section{
+  display:flex;
+  align-items:center;
+  height:calc(100vh - 50px);;
+  flex-direction:column;
+  background-image: url('https://raw.githubusercontent.com/workname-wizard/Webp/refs/heads/main/welcome-section.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+#welcome-section h1{
+  color:var(--pink)
+}
+#welcome-section p{
+  color:var(--yellow);
+  font-size:3rem;
+  text-align: center;
+}
+
+.welcome-txt{
+  margin:20vh auto 20vh auto;
+}
+
+/*Projektbereich*/
+
+.project-bento{
+  background-color: rgba(40, 40, 40, 1);
+}
+
+#projects h2{
+  background-color: var(--yellow);
+  height:50px;
+  width:100%;
+  font-size:2.4rem;
+  font-weight:500;
+}
+.project-bento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive Spalten */
+  grid-auto-rows: 200px;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.project-tile {
+  background-color: var(--yellow);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.project-tile:hover {
+  transform: scale(1.03);
+  background-color: var(--pink);
+  color: white;
+}
+
+.tile-content {
+  text-align: center;
+}
+
+
+.project-bento img{
+  object-fit: cover;
+  overflow:hidden;
+  width:30%;
+  height:auto;
+}
+
+
+#contact{
+  background-color:var(--background-black) ;
+  text-align: center;
+
+}
+#contact h2{
+  color:var(--pink);
+  font-family: "Sedgwick Ave",Arial;
+  font-size:3rem;
+  font-weight: 700;
+}
+#contact p{
+  color:white;
+  font-size:2.2rem;
+}
+#profile-link{
+  text-decoration: none;
+  color:var(--yellow);
+  font-size:2.2rem;
+  font-weight:400;
+  margin:3rem;
+  line-height:6rem;
+}
+#profile-link:hover{
+  color:var(--pink)
+}
+
+footer{
+  background-color: var(--background-black);
+  text-align: left;
+  border-top: solid 8px var(--yellow);}
+footer h2{
+  color:var(--yellow);
+  font-size:1.8rem;
+}
+footer p{ 
+  color:white;
+  font-size:1.8rem;
+}
+@media(max-width:768px){
+  #profile-link{
+    line-height:normal;
+    margin:1rem auto;
+  }
+  .contact-links{
+
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+}
