@@ -3,6 +3,7 @@
 :root{
   --yellow:rgba(255, 252, 93, 1);
   --pink:rgba(255, 0, 250, 1);
+  --green:rgba(69, 228, 4, 1);
   --background-black:rgba(40, 40, 40, 1);
 
   font-family:'Oswald', sans-serif;
